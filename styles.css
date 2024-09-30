@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Poppins', sans-serif;
+    background-color:  #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    background-color:  #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: left;
+    position: relative;
+    
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.school {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.info {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.projects {
+    margin-top: 20px;
+}
+
+.projects h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.project img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    
+    object-position: center;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project-name {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.2;
+}
